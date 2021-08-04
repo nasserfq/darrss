@@ -29,6 +29,7 @@ gem 'trix-rails', '~> 2.3'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.11'
+gem 'rails_admin', '~> 2.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
