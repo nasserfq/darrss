@@ -370,7 +370,6 @@ DEPENDENCIES
   simple_form (~> 5.1)
   simple_format (~> 0.0.2)
   spring
-  sprockets (~> 3.7.2)
   trix-rails (~> 2.3)
   turbolinks (~> 5)
   tzinfo-data
