@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
   <head>
-    <title><%= Rails.configuration.application_name %></title>
+    <title><%= "درس" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body class="<%= yield (:body_class) %>">
@@ -17,7 +18,6 @@
         <p class="notice"><%= notice %></p>
       </div>
     <% end %>
-
     <% if flash[:alert] %>
     <div class="notification is-danger global-notification">
       <p class="alert"><%= alert %></p>
@@ -27,7 +27,9 @@
      <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <%= link_to root_path, class:"navbar-item" do %>
-          <h1 class="title is-5"><%= Rails.configuration.application_name %></h1>
+          <%= link_to root_path do %>
+         <%= image_tag '/images/logo.png', :size => "150x150" %>
+        <% end  %>
         <% end  %>
         <div class="navbar-burger burger" data-target="navbar">
           <span></span>
@@ -40,21 +42,24 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
+            <p class="control">
+              <%= link_to 'اعرض وظيفة', new_job_path, class: "navbar-item button is-primary is-rounded" %>
+            </p>
             <% if user_signed_in? %>
 
               <div class="navbar-item has-dropdown is-hoverable">
-                <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
+                <%= link_to 'حسابك الشخصي', edit_user_registration_path, class: "navbar-link" %>
                 <div class="navbar-dropdown is-right">
                   <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                  <%= link_to "تسجيل الخروج", destroy_user_session_path, method: :delete, class:"navbar-item" %>
                 </div>
               </div>
             <% else %>
             <p class="control">
-              <%= link_to "Sign In", new_user_session_path, class:"navbar-item button" %>
+              <%= link_to "تسجيل الدخول", new_user_session_path, class:"navbar-item button" %>
             </p>
             <p class="control">
-              <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button"%>
+              <%= link_to "حساب جديد", new_user_registration_path, class:"navbar-item button"%>
             </p>
             <% end %>
 
@@ -64,17 +69,14 @@
     </div>
   </nav>
 
-  <section class="section">
-    <div class="container">
-      <%= yield %>
-    </div>
-  </section>
+
+  <%= yield %>
 
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
         <p>
-        Visit <a href="https://web-crunch.com" target="_blank">Web-Crunch.com</a> for more builds like this one.
+        <script>document.write( new Date().getFullYear() );</script> © darrss.com 
         </p>
       </div>
     </div>

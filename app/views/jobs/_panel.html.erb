@@ -1,0 +1,35 @@
+<nav class="panel">
+  
+
+  <ul class="mb3 pa0">
+    <li class="pv1">
+      <%= link_to 'جميع المواد', jobs_path, class: "button is-fullwidth is-dark" %>
+    </li>
+
+    <li class="pv1">
+      <%= link_to 'عربية-نحو', jobs_path(job_type: "Arabic"), class: "button is-fullwidth is-primary" %>
+    </li>
+
+    <li class="pv1">
+      <%= link_to 'إنجليزي', jobs_path(job_type: "English"), class: "button is-fullwidth is-link" %>
+    </li>
+
+    <li class="pv1">
+      <%= link_to 'الرياضيات', jobs_path(job_type: "Mathematics"), class: "button is-fullwidth is-warning" %>
+    </li>
+
+    <li class="pv1">
+      <%= link_to 'الفيزياء', jobs_path(job_type: "Physics"), class: "button is-fullwidth is-info" %>
+    </li>
+     <li class="pv1">
+      <%= link_to 'الكيمياء', jobs_path(job_type: "Chemistry"), class: "button is-fullwidth is-light" %>
+    </li>
+    <li class="pv1">
+      <%= link_to 'علوم-أحياء', jobs_path(job_type: "Biology"), class: "button is-fullwidth is-success is-light" %>
+    </li>
+    <li class="pv1">
+      <%= link_to 'علوم-الحاسب', jobs_path(job_type: "Computer-Science"), class: "button is-fullwidth is-info is-light" %>
+    </li>
+  </ul>
+</nav>
+

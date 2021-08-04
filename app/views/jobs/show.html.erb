@@ -1,0 +1,47 @@
+<div class="columns pt4 pb7">
+  <div class="column is-7 is-offset-1">
+
+    <p class="f7"><i class="fa fa-clock"></i> انشئت <%= time_ago_in_words(@job.created_at) %> قبل</p>
+    
+    <h1 class="title is-2"><%= @job.title %></h1>
+
+    <ul class="list pb4">
+      <li class="inline-block f6 pr2"><%= job_type(@job.job_type) %></li>
+      <li class="inline-block f6 ph2"><i class="fa fa-pin"></i> <%= @job.location %></li>
+      <% if @job.remote_ok? %>
+        <li class="inline-block f6 ph2"><i class="fa fa-wifi"></i> عن بعد</li>
+      <% end %>
+    </ul>
+
+    <div class="content text-serif f4">
+      <%= @job.description.to_s.html_safe  %>
+    </div>
+
+   
+  </div>
+
+  <div class="column is-2 is-offset-1 has-text-centered">
+
+    
+
+    
+    <h5 class="is-5 has-text-centered"><%= link_to @job.phone%></h5>
+
+    <div class="mt2 mb4">
+    
+    </div>
+
+    
+    <% if current_user.try(:admin) || job_author(@job) %>
+      <ul class="pv3">
+        <li class="pv1 f6">واجهة التحكم: </li>
+        <li class="pv1 inline-block">
+          <%= link_to 'عرض', @job, class: 'button is-small is-link is-outlined' %></li>
+        <li class="pv1 inline-block">
+          <%= link_to 'تعديل', edit_job_path(@job), class: 'button is-small is-link is-outlined' %></li>
+        <li class="pv1 inline-block">
+          <%= link_to 'حذف', @job, method: :delete, data: { confirm: 'هل أنت متأكد؟' }, class: 'button is-small is-link is-outlined' %></li>
+      </ul>
+    <% end %>
+  </div>
+</div>
