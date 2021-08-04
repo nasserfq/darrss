@@ -193,6 +193,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -296,7 +297,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
@@ -348,6 +348,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick (~> 4.11)
+  pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
@@ -358,7 +359,6 @@ DEPENDENCIES
   simple_form (~> 5.1)
   simple_format (~> 0.0.2)
   spring
-  sqlite3 (~> 1.4)
   trix-rails (~> 2.3)
   turbolinks (~> 5)
   tzinfo-data
