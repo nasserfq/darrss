@@ -4,6 +4,9 @@ require "nested_form/builder_mixin"
 
 RailsAdmin.config do |config|
 
+  config.authorize_with do
+    redirect_to main_app.root_path unless warden.user.admin == true
+  end
   ### Popular gems integration
 
   ## == Devise ==
