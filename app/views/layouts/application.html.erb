@@ -44,11 +44,11 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
-            <% unless mobile? %>
+          <% unless mobile? %>
             <p class="control">
               <%= link_to 'اعرض وظيفة', new_job_path, class: "navbar-item button is-primary is-rounded" %>
             </p>
-            <% end %>
+          <% end %>
             <% if user_signed_in? %>
 
               <div class="navbar-item has-dropdown is-hoverable">
@@ -70,7 +70,6 @@
           </div>
         </div>
       </div>
-       <% end %>
     </div>
    
   </nav>
