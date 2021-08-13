@@ -38,10 +38,13 @@
         </div>
       </div>
 
+      <% unless mobile? %>
+      
       <div id="navbar" class="nav-toggle">
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
+
             <p class="control">
               <%= link_to 'اعرض وظيفة', new_job_path, class: "navbar-item button is-primary is-rounded" %>
             </p>
@@ -66,7 +69,9 @@
           </div>
         </div>
       </div>
+       <% end %>
     </div>
+   
   </nav>
 
 
