@@ -16,7 +16,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-
+  config.force_ssl = true
   config.action_mailer.default_url_options = { :host => 'darrss.herokuapp.com' }
   Rails.application.routes.default_url_options[:host] = 'darrss.herokuapp.com'
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
