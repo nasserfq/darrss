@@ -4,9 +4,11 @@
 @import "functions";
 @import "jobs";
 
-.body {
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: transparent;
+
+body{
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 .notification {
   border-radius: 0;
