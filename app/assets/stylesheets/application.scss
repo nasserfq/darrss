@@ -4,7 +4,10 @@
 @import "functions";
 @import "jobs";
 
-
+.body {
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
 .notification {
   border-radius: 0;
 }
