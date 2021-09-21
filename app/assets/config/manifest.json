@@ -1,5 +1,50 @@
 {
-    "name": "Darrss",
+    "short_name": "Darrss",
+    "name": "For private tutors",
+    "icons": [
+      {
+        "src": "/images/icons-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/icons-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
     "display": "standalone",
-    "start_url": "/?standalone=true"
-}
+    "scope": "/", 
+    "theme_color": "#3367D6",
+    "shortcuts": [
+      {
+        "name": "Darrss",
+        "short_name": "Darrss",
+        "description": "درس",
+        "url": "/today?source=pwa",
+        "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+      },
+      {
+        "name": "درس",
+        "short_name": "درس",
+        "description": "درس",
+        "url": "/tomorrow?source=pwa",
+        "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
+      }
+    ],
+    "description": "Weather forecast information",
+    "screenshots": [
+      {
+        "src": "/images/screenshot1.png",
+        "type": "image/png",
+        "sizes": "540x720"
+      },
+      {
+        "src": "/images/screenshot2.jpg",
+        "type": "image/jpg",
+        "sizes": "540x720"
+      }
+    ]
+  }
