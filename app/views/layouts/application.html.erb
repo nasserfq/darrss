@@ -39,20 +39,6 @@
       <p class="alert"><%= alert %></p>
     </div>
     <% end %>
-
-    <div class='card equal-height'>
-    <div class="card-image has-text-centered">
-        <figure class="image is-64x64 is-inline-block">
-              <%= link_to root_path, class:"navbar-item" do %>
-          <%= link_to root_path do %>
-         
-         <%= image_tag '/images/logo.png', :size => "100x100", class: "image is-inline-block" %>
-          
-        <% end  %>
-        <% end  %> 
-        </figure>
-    </div>
-  </div>
   
    <nav class ="navbar is-primary">
     <div class = "container">
@@ -104,6 +90,22 @@
      </div>
     </div>
   </nav>
+
+
+  <div class='card equal-height'>
+    <div class="card-image has-text-centered">
+        <figure class="image is-64x64 is-inline-block">
+              <%= link_to root_path, class:"navbar-item" do %>
+          <%= link_to root_path do %>
+         
+         <%= image_tag '/images/logo.png', :size => "100x100", class: "image is-inline-block" %>
+          
+        <% end  %>
+        <% end  %> 
+        </figure>
+    </div>
+  </div>
+  
   <script type="text/javascript">
     (function () {
       var burger = document.querySelector('.burger');
