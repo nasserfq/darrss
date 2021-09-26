@@ -67,7 +67,9 @@
          <a href="/jobs?job_type=Chemistry" class="navbar-item">الكيمياء</a>
          <a href="/jobs?job_type=English" class="navbar-item">علوم - احياء</a>
          <a href="/jobs?job_type=Computer-Science" class="navbar-item">علوم الحاسب</a>
-
+<%
+=begin%>
+ 
          <% if user_signed_in? %>
 
               <div class="navbar-item has-dropdown is-hoverable">
@@ -85,7 +87,9 @@
               <%= link_to "حساب جديد", new_user_registration_path, class:"navbar-item button"%>
             </p>
             <% end %>
-         
+          
+<%
+=end%>
        </div>   
      </div>
     </div>

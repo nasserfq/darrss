@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, except: [:index, :show]
+  # before_action :authenticate_user!, except: [:index, :show]
   # GET /jobs or /jobs.json
   def index
     if(params.has_key?(:job_type))
@@ -16,7 +16,8 @@ class JobsController < ApplicationController
 
   # GET /jobs/new
   def new
-    @job = current_user.jobs.build
+    # @job = current_user.jobs.build
+    @job = Job.new
   end
 
   # GET /jobs/1/edit
@@ -25,11 +26,13 @@ class JobsController < ApplicationController
 
   # POST /jobs or /jobs.json
   def create
-    @job = current_user.jobs.build(job_params)
+    # @job = current_user.jobs.build(job_params)
+
+    @job = Job.new(params.require(:job).permit(:title, :description, :phone, :job_type, :location, :job_author, :remote_ok))
 
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: "Job was successfully created." }
+        format.html { redirect_to @job, notice: "تم تسليم الوظيفة بنجاح" }
         format.json { render :show, status: :created, location: @job }
       else
         format.html { render :new, status: :unprocessable_entity }
